@@ -1,5 +1,3 @@
-
-
 ```python
 import pandas as pd
 import numpy as np
@@ -9,6 +7,9 @@ import matplotlib.pyplot as plt
 
 ## Predictive Diagram
 ![Predictive Diagram](./images/predictive-diagram.png)
+
+## Model
+![Alteryx Project Linear Regresion Model](./images/model.png)
 
 ### Price Equation
 **Price** = -5,269 + 8,413 x **Carat** + 158.1 x **Cut** + 454 x **Clarity**
