@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="881" y="78.00012" width="310" height="201.9999" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Aggregate and get final results</Caption>
+          <Style TextColor="#314c4a" FillColor="#e3a93e" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="918" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Score" action="Sum" rename="Sum_Score" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1006" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Sum_Score]*0.7" field="Sum_Score" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText><![CDATA[Sum_Score = [Sum_Score]*0.7
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Sum_Score = [Sum_Score]*0.7
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1100" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\george\AppData\Local\Temp\Engine_31028_968399a535044fbe91bec85107c1fa6c_\Engine_38408_6eebdbc64c2848338cdb3f799b168825_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="906" y="122.0001" width="100" height="28.00002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Total Predictions</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="995" y="207" width="84" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Calculate Bid Value (70% of the Total)</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1094" y="207" width="72" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Browse Final Result</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="458" y="78" width="410" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Predict new diamonds prices</Caption>
+          <Style TextColor="#ffffff" FillColor="#000075" BorderColor="#314c4a" Transparency="40" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings>
+            <Position x="666" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="score field">Score</Value>
+              <Value name="is oversampled">False</Value>
+              <Value name="oversampled value" />
+              <Value name="original percent">2.0</Value>
+              <Value name="log y">False</Value>
+              <Value name="prediction.interval">False</Value>
+              <Value name="interval.level">95</Value>
+              <Value name="append.xdf">False</Value>
+              <Value name="num.records">256000</Value>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText>Predict prices</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Field_1" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="carat" source="R-DATA:" type="Double" />
+                <Field name="cut" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="cut_ord" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="color" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="clarity" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="clarity_ord" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Score" source="R-DATA:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Score.yxmc" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="503" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText>New diamonds data</AnnotationText>
+              <DefaultAnnotationText>new-diamonds.csv</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Field_1" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+                <Field name="carat" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+                <Field name="cut" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+                <Field name="cut_ord" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+                <Field name="color" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+                <Field name="clarity" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+                <Field name="clarity_ord" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\new-diamonds.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="570" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="carat" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText>Set data types</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="761" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\george\AppData\Local\Temp\Engine_31028_968399a535044fbe91bec85107c1fa6c_\Engine_38408_254935a4816f4116be249da08fa7fb96_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="483" y="174" width="100" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>New Diamonds Data</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="546" y="265" width="100" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Set Data Types</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="647" y="122" width="100" height="28" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Predict Prices</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="743" y="266" width="100" height="28" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Browse Results</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="5.000053" y="78" width="433.9999" height="229" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Building the linear regresion model</Caption>
+          <Style TextColor="#314c4a" FillColor="#a8e2ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="54.99998" y="150.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name>Known Data</Name>
+              <AnnotationText><![CDATA[ Historical Diamonds Data]]></AnnotationText>
+              <DefaultAnnotationText>diamonds.csv</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Field_1" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="carat" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="cut" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="cut_ord" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="color" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="clarity" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="clarity_ord" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+                <Field name="price" size="254" source="File: D:\Dropbox\Nanodegrees\Business Analyst\Diamonds\diamonds.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="151" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="carat" selected="True" type="Double" size="8" />
+                <SelectField field="cut_ord" selected="False" />
+                <SelectField field="clarity_ord" selected="False" />
+                <SelectField field="price" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText>Set Data Types</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="Linear_Regression">
+            <Position x="247" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="standardize_pred">True</Value>
+              <Value name="internal_cv">True</Value>
+              <Value name="display_graphs">True</Value>
+              <Value name="set_seed_internal_cv">True</Value>
+              <Value name="set_seed_external_cv">True</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Linear_Regression_3</Value>
+              <Value name="Y Var">price</Value>
+              <Value name="X Vars">carat,cut,color,clarity</Value>
+              <Value name="Omit Constant">False</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name>Linear Regression</Name>
+              <AnnotationText>Linear Regression</AnnotationText>
+              <DefaultAnnotationText>Linear_Regression_3</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="330" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\george\AppData\Local\Temp\Engine_31028_968399a535044fbe91bec85107c1fa6c_\Engine_38408_2406037f5146404daecf2bdb2c30e35f_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="224" y="122" width="108" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Linear Regresion</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="30.00005" y="126" width="108" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Historical Data</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="138" y="210" width="108" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Set Data Types</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="306" y="258" width="108" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Browse Results</Text>
+              <Font name="Segoe UI" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="5" Connection="Left Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Right Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Reports" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Model</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
